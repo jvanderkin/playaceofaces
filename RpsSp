@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+</head>
+<body style="background-color:powderblue;">
+
+<h1> Rock Paper Scissors! </h>
+
+<p> Computer's Hand </p>
+
+<img id="computerHand" src="https://is4-ssl.mzstatic.com/image/thumb/Purple7/v4/54/06/01/5406018a-fe8e-bb50-ea68-9aa8db410fab/source/256x256bb.jpg" alt="Rock Paper Scissors!">
+
+<p> Your Hand </p>
+
+<img id="playerHand" src="https://is4-ssl.mzstatic.com/image/thumb/Purple7/v4/54/06/01/5406018a-fe8e-bb50-ea68-9aa8db410fab/source/256x256bb.jpg" alt="Rock Paper Scissors!">
+ 
+<p></p>
+<button onclick="Rock()">Rock</button>
+<button onclick="Paper()">Paper</button>
+<button onclick="Scissors()">Scissors</button>
+
+<p id="results">  </p>
+
+<script>
+function Rock() { document.getElementById('playerHand').src='https://vignette.wikia.nocookie.net/play-rust/images/f/ff/Rock_icon.png/revision/latest?cb=20151106061532'
+var comp = Math.floor(Math.random() * 3);
+var greeting;
+if (comp==0) {
+ document.getElementById('computerHand').src='https://vignette.wikia.nocookie.net/play-rust/images/f/ff/Rock_icon.png/revision/latest?cb=20151106061532';
+ result = "TIE."
+ }
+ if (comp==1) {
+ document.getElementById('computerHand').src='https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/roll-of-paper.png';
+ result = "LOSS!";
+ }
+ if (comp==2) {
+ document.getElementById('computerHand').src='https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/scissors.png';
+ result = "WIN!";
+}
+document.getElementById("results").innerHTML = result;
+}
+
+function Paper() {
+document.getElementById('playerHand').src='https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/roll-of-paper.png'
+var greeting;
+var comp = Math.floor(Math.random() * 3);
+if (comp==0) {
+ document.getElementById('computerHand').src='https://vignette.wikia.nocookie.net/play-rust/images/f/ff/Rock_icon.png/revision/latest?cb=20151106061532';
+ result = "WIN!"
+ }
+ if (comp==1) {
+ document.getElementById('computerHand').src='https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/roll-of-paper.png';
+ result = "TIE.";
+ }
+ if (comp==2) {
+ document.getElementById('computerHand').src='https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/scissors.png';
+ result = "LOSS!";
+}
+document.getElementById("results").innerHTML = result;
+}
+
+function Scissors() {
+ document.getElementById('playerHand').src='https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/scissors.png'
+ var greeting;
+ var comp = Math.floor(Math.random() * 3);
+if (comp==0) {
+ document.getElementById('computerHand').src='https://vignette.wikia.nocookie.net/play-rust/images/f/ff/Rock_icon.png/revision/latest?cb=20151106061532';
+ result = "LOSS!"
+ }
+ if (comp==1) {
+ document.getElementById('computerHand').src='https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/roll-of-paper.png';
+ result = "WIN!";
+ }
+ if (comp==2) {
+ document.getElementById('computerHand').src='https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/scissors.png';
+ result = "TIE.";
+}
+document.getElementById("results").innerHTML = result;
+}
+</script>
+
+</body>
+</html> 
